@@ -1,6 +1,3 @@
-# Cadence---Music-that-suits-you
-
-
 # Cadence - Music That Suits You
 
 Welcome to **Cadence**, a sleek and user-friendly music player webpage built with HTML, CSS, and JavaScript. This project offers an engaging way to listen to your favorite songs with intuitive controls for playback, navigation, and more.
