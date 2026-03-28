@@ -30,19 +30,6 @@ function ControlCenter({ currentSong, onNext, onPrevious }) {
   const handleTimeUpdate = () => setCurrentTime(audioRef.current.currentTime);
   const handleLoadedMetadata = () => setDuration(audioRef.current.duration);
 
-  const handleSeek = (e) => {
-    const time = parseFloat(e.target.value);
-    audioRef.current.currentTime = time;
-    setCurrentTime(time);
-  };
-
-  const handleVolumeChange = (e) => {
-    const vol = parseFloat(e.target.value);
-    setVolume(vol);
-    audioRef.current.volume = vol;
-    setIsMuted(vol === 0);
-  };
-
   const toggleMute = () => {
     if (!audioRef.current) return;
     if (isMuted) {
