@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Cadence — Music That Suits You
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A music player web app built with React 19. Browse a curated library of tracks, control playback seamlessly, and enjoy a clean, responsive listening experience — all in the browser.
 
-## Available Scripts
+🌐 **Live Demo**: [cadencemusics.netlify.app](https://cadencemusics.netlify.app/)
 
-In the project directory, you can run:
+![Cadence App](./public/Cadence_Webpage.png)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Music playback controls** — play, pause, skip forward, skip backward, and rewind
+- **Track navigation** — browse and select from a curated song library
+- **Progress tracking** — real-time playback progress with seek functionality
+- **Responsive design** — clean layout that works across desktop and mobile
+- **Smooth UI** — icon-driven controls using Font Awesome for a polished experience
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+| Layer        | Technology                         |
+| ------------ | ---------------------------------- |
+| UI Framework | React 19                           |
+| Styling      | CSS3 (custom properties, flexbox)  |
+| Icons        | Font Awesome                       |
+| Build Tool   | Create React App (react-scripts 5) |
+| Hosting      | Netlify                            |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+Cadence---Music-that-suits-you/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/       # Player controls, track list, progress bar
+│   ├── data/             # Song library and track metadata
+│   ├── App.js            # Root component and state management
+│   ├── App.css           # Global styles
+│   └── index.js          # React DOM entry point
+├── package.json
+└── README.md
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Running Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Node.js v16+
+- npm
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Setup
 
-## Learn More
+```bash
+# Clone the repository
+git clone https://github.com/Savant-Mullapudi/Cadence---Music-that-suits-you.git
+cd Cadence---Music-that-suits-you
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Install dependencies
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Start the development server
+npm start
+```
 
-### Code Splitting
+The app will open at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Build for production
 
-### Analyzing the Bundle Size
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Key Implementation Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **React 19** — built on the latest React release, leveraging the updated rendering pipeline for improved performance
+- **Component-driven architecture** — player controls, track list, and progress bar are each isolated components with clear props interfaces
+- **State-driven playback** — all audio state (current track, play/pause, progress) lives in a single root-level state, passed down as props for predictable data flow
+- **No external audio API dependencies** — playback is handled via the native HTML5 `<audio>` element, keeping the bundle lightweight
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Deployment
 
-### Deployment
+Deployed on **Netlify** with automatic builds from the `main` branch.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To deploy your own fork:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Push the repo to your GitHub account
+2. Connect it to [Netlify](https://netlify.com)
+3. Netlify auto-detects CRA settings — build command `npm run build`, publish directory `build/`
+4. Deploy
